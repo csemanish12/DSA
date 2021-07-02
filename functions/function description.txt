@@ -1,0 +1,6 @@
+Functions in Python are first-class objects, which means that you can
+pass them around as you’d do with any other object. You can also use
+them as arguments and return values of other functions.
+Functions that accept other functions as arguments or that return
+functions (or both) are known as higher-order functions, which are also
+a desirable feature in functional programming.
