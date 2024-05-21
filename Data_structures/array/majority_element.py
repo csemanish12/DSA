@@ -58,7 +58,7 @@ class Solution:
 
 s = Solution()
 
-input_1 = [2, 2, 1, 1, 1, 2, 2]
+input_1 = [2, 8, 8, 1, 1, 2, 2, 8]
 print("output 1:", s.majorityElement(input_1))
 
 input_2 = [3, 2, 3]
