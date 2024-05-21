@@ -27,19 +27,29 @@ Follow up: Could you solve the problem in linear time and in O(1) space?
 """
 from typing import List
 
+
 class Solution:
+    """
+    At max there can be only two elements whose count can be greater than n/3
+    example:
+    array size = 8
+    n/3 = 2.... = 2
+    greater than 2 is 3.
+    3 * 3 = 9 -> exceeds array size
+    3 * 2 = 6 -> within array size
+    """
     def majorityElement(self, nums: List[int]) -> List[int]:
         count1 = 0
         count2 = 0
         element1 = None
         element2 = None
-        n_by_3 = len(nums)//3
+        n_by_3 = len(nums) // 3
         for num in nums:
             if count1 == 0 and element2 != num:
                 count1 = 1
                 element1 = num
             elif count2 == 0 and element1 != num:
-                count2 =1
+                count2 = 1
                 element2 = num
 
             elif element1 == num:
@@ -70,10 +80,8 @@ class Solution:
 
 s = Solution()
 
-
-input_1 = [3,2,3]
+input_1 = [3, 2, 3]
 print("output 1:", s.majorityElement(input_1))
 
-input_2 = [1,2]
+input_2 = [1, 2]
 print("output 2:", s.majorityElement(input_2))
-
