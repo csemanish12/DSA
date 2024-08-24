@@ -34,6 +34,9 @@ class TreeNode:
 class Solution:
     """
     find height recursively for left and right
+
+    TC= O(N)
+    SC = O(N)
     """
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         if root is None:
