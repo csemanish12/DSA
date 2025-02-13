@@ -1,2 +1,29 @@
 .idea
 .vscode
+
+# node js dependencies
+node_modules
+npm-debug.log*
+yarn-error.log
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# TypeScript build output
+dist/
+build/
+out/
+
+# Debugging and testing
+.DS_Store
+coverage/  # Code coverage reports
+jest/
+*.log
+*.cache
+.nyc_output/
+playwright-report/
+
+# MacOS system files
+Thumbs.db
+.DS_Store
