@@ -43,8 +43,22 @@ Space complexity: O(1)
 Time complexity: O(log10N+1)
 - the complexity is defined by the number of digits
 - in worst case, when N is multiples of 10, the number of digit is LogN+1
-- as Log10N means, “How many times do you divide N by 10 to reach 1?”
+- as Log10N means, “How many times do you divide N by 10 to reach 1?” 
+     -> we can get this number directly by using math library
 - we will divide the number by the number of digit, which is N
 - and one additional division to make it 0 to break our loop
 - hence Log10N + 1
 """
+
+
+import math
+def count_digits_optimal(n: int):
+    if n > 0:
+        return int(math.log10(n)) + 1 
+    return 1
+
+input_1 = 12345
+print(f"number of digits using optimal approach for input:{input_1} is", count_digits_optimal(input_1))
+
+input_2 = 5
+print(f"number of digits using optimal approach for input:{input_2} is", count_digits_optimal(input_2))
