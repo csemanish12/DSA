@@ -50,3 +50,18 @@ print(f"{input_1} is palindrome? {solution.isPalindrome(input_1)}")
 
 input_1 = -121
 print(f"{input_1} is palindrome? {solution.isPalindrome(input_1)}")
+
+"""
+Time complexity: O(log10N)
+- we are diving the input number until is becomes 0
+- this requires log10N + 1 operationr
+- log10N operation to reach 1
+- 1 additional operation of reach 0
+hence time complexity is O(log10N+1) ~= O(log10N)
+
+Space Complexity: O(1)
+- we are using only two new variables to store x temporarily and reversed number
+- there will alaways be just two variables no matter the input
+- hence the space complexity is constant. O(1)
+
+"""
