@@ -105,3 +105,16 @@ class Solution:
             neighbors.append((row, column + 1))
         
         return neighbors
+    
+
+
+"""
+Space complexity: O(mxn)
+- visited array = O(mxn)
+- queue = O(mxn) => worst case, when all the oranges are  rotten
+
+Time complexity: O(mxn)
+- get initial rotten oranges = O(mxn)
+- bfs traversal O(V)
+
+"""
