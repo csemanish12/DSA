@@ -34,12 +34,13 @@ n == grid[i].length
 1 <= m, n <= 10
 grid[i][j] is 0, 1, or 2.
 """
+from collections import deque
 
 class Solution:
-    def orangesRotting(self, grid: List[List[int]]) -> int:
+    def orangesRotting(self, grid: list[list[int]]) -> int:
         total_oranges = 0
         rotten_oranges = 0
-        queue = []
+        queue = deque()
         m = len(grid)
         n = len(grid[0])
         visited = [[False for _ in range(n)] for _ in range(m)]
@@ -62,7 +63,7 @@ class Solution:
 
         # traverse the grid
         while queue:
-            row, column, current_time_taken = queue.pop(0)
+            row, column, current_time_taken = queue.popleft()
             neighbors = self._get_neighbors(row, column, m, n)
             print(f"node= {(row, column)} neighbor:{neighbors}")
             if not neighbors:
@@ -74,7 +75,7 @@ class Solution:
                     visited[neighbor_row][neighbor_col] = True
                     rotten_oranges += 1
             
-            time_taken = max(time_taken, current_time_taken)
+        time_taken = max(time_taken, current_time_taken)
 
 
         if total_oranges != rotten_oranges:
