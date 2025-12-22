@@ -47,14 +47,18 @@ class Solution:
                     queue.append(neighbor)
                     visited[neighbor] = True    
         
-        print(traversed)
+        return traversed
 
 
 input_1 = [[2, 3, 1], [0], [0, 4], [0], [2]]
-Solution().bfs(input_1)
+expected = [0, 2, 3, 1, 4]
+output = Solution().bfs(input_1)
+print(f"expected:{expected}, actual: {output}")
 
 input_2 = [[1, 2], [0, 2], [0, 1, 3, 4], [2], [2]]
-Solution().bfs(input_2)
+expected = [0, 1, 2, 3, 4]
+output = Solution().bfs(input_2)
+print(f"expected:{expected}, actual: {output}")
 
 
 """
