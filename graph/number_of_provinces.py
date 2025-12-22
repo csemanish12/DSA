@@ -51,3 +51,18 @@ print(f"expected:{expected}, actual:{Solution().findCircleNum(input_2)}")
 input_3 = [[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
 expected = 1
 print(f"expected:{expected}, actual:{Solution().findCircleNum(input_3)}")
+
+
+"""
+Time complexity: O(N^2) => number of city
+- outer loop: scan all the cities
+- inner loop: scans the connection with every city
+
+Space Complexity: O(N) => number of city
+- visited array stores boolean data for all cities (N)
+- Recursion Stack space: O (N)
+  - in the worse case, all cities form a single line
+  - the max depth will be number of cities
+  - hence O(N)
+
+"""
