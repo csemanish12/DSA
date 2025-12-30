@@ -80,8 +80,8 @@ hence, O(MxN) + O(MxN) => O(MxN)
 Space complexity: O(MxN)
 - store all zeroes => O(MxN) => worst case: everything is zero
 - visited node dict => O(MxN) => worst case: everything is zero
-- queue => O(min(MxN)) => BFS level width
+- queue => O(min(M,N)) => BFS level width
 - captured node => O(MxN) => worst case: everything is zero
-hence, O(MxN) + O(MxN) + O(MxN) => O(MxN)
+hence, O(MxN) + O(MxN) + O(min(M,N)) + O(MxN) => O(MxN)
 
 """

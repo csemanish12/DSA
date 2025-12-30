@@ -95,6 +95,6 @@ Hence, O(MxN) + O(MxN) => O(MxN)
 Space complexity: O(MxN)
 - matrix to store distance => O(MxN)
 - visited array  => O(MxN)
-- queue => O(min(MxN)) => BFS level width
-Hence, O(MxN) + O(MxN) => O(MxN)
+- queue => O(min(M,N)) => BFS level width
+Hence, O(MxN) + O(MxN) + O(min(M,N)) => O(MxN)
 """
