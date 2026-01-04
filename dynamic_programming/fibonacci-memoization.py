@@ -23,7 +23,7 @@ expected_output = 5
 actual_output = Solution().fibonacci(input_1)
 print(f"expected:{expected_output}, actual:{actual_output}")
 
-input_1 = 900
+input_1 = 7
 expected_output = 13
 actual_output = Solution().fibonacci(input_1)
 print(f"expected:{expected_output}, actual:{actual_output}")
