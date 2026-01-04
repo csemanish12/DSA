@@ -65,7 +65,6 @@ class Solution:
         while queue:
             row, column, current_time_taken = queue.popleft()
             neighbors = self._get_neighbors(row, column, m, n)
-            print(f"node= {(row, column)} neighbor:{neighbors}")
             if not neighbors:
                 continue
             
@@ -119,3 +118,18 @@ Time complexity: O(mxn)
 - bfs traversal O(V)
 
 """
+
+input_1 = [[2,1,1],[1,1,0],[0,1,1]]
+expected_output = 4
+actual_output = Solution().orangesRotting(input_1)
+print(f"expected:{expected_output}, actual_output:{actual_output}")
+
+input_1 = [[2,1,1],[0,1,1],[1,0,1]]
+expected_output = -1
+actual_output = Solution().orangesRotting(input_1)
+print(f"expected:{expected_output}, actual_output:{actual_output}")
+
+input_1 = [[0,2]]
+expected_output = 0
+actual_output = Solution().orangesRotting(input_1)
+print(f"expected:{expected_output}, actual_output:{actual_output}")
