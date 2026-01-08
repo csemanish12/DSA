@@ -59,6 +59,11 @@ expected_output = 2
 actual_output = Solution().climbStairs(input1)
 print(f"expected:{expected_output}, actual:{actual_output}")
 
+input1 = 3
+expected_output = 3
+actual_output = Solution().climbStairs(input1)
+print(f"expected:{expected_output}, actual:{actual_output}")
+
 input1 = 4
 expected_output = 5
 actual_output = Solution().climbStairs(input1)
